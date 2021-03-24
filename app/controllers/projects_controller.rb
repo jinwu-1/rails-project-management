@@ -9,11 +9,12 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
+    @task = @project.tasks.build
   end
 
   # GET /projects/new
   def new
-    @projects = current_user.projects.build
+    @project = current_user.projects.build
   end
 
   # GET /projects/1/edit
